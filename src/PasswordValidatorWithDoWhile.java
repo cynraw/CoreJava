@@ -11,8 +11,13 @@ public class PasswordValidatorWithDoWhile {
             System.out.println("Please enter the valid password");
             String inputPassword = sc.next();
             isEquals = validPassword.equals(inputPassword);
+            if (!isEquals){
+                System.out.println("Invalid Password try again!");
+            }
         }while(!isEquals);
 
         System.out.println("Welcome Home.");
+
+        sc.close();
     }
 }
